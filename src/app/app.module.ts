@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, ProductCardComponent],
   imports: [
     BrowserModule,
     HttpClientModule,

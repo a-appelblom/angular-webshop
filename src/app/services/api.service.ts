@@ -11,7 +11,8 @@ export class APIService {
 
   constructor(private http: HttpClient) {}
 
-  getRequest(): Observable<any> {
-    return this.http.get(this.APIUrl);
+  getData(): Observable<any> {
+    const test = this.http.get(this.APIUrl);
+    return test;
   }
 }
