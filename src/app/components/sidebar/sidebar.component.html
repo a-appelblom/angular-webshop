@@ -1,0 +1,13 @@
+<mat-drawer-container class="sideDrawerContainer" autosize>
+    <mat-drawer #drawer class="sideDrawer" mode="side">
+        <button (click)="showMovieList = !showMovieList" mat-raised-button>
+        </button>
+    </mat-drawer>
+
+    <div class="">
+        <button type="button" mat-button (click)="drawer.toggle()">
+            Toggle sidenav
+        </button>
+    </div>
+
+</mat-drawer-container>

@@ -6,13 +6,22 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class APIService {
-  APIUrl =
-    'https://medieinstitutet-wie-products.azurewebsites.net/api/products';
+  APIUrl = 'https://medieinstitutet-wie-products.azurewebsites.net/api';
 
   constructor(private http: HttpClient) {}
 
-  getData(): Observable<any> {
-    const test = this.http.get(this.APIUrl);
-    return test;
+  getProducts(): Observable<any> {
+    const data = this.http.get(this.APIUrl + '/products');
+    return data;
+  }
+
+  getProduct(id): Observable<any> {
+    const data = this.http.get(`${this.APIUrl}/products/${id}`);
+    return data;
+  }
+
+  getCategories(): Observable<any> {
+    const data = this.http.get(this.APIUrl + '/categories');
+    return data;
   }
 }
